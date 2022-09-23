@@ -1,4 +1,7 @@
+using System;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
 
 namespace CommonLibs.Implementation
 {
@@ -16,7 +19,7 @@ namespace CommonLibs.Implementation
             browserType = browserType.Trim();
             pageLoadTime = 60;
             elementDetectionTimeout = 10;
-            
+
             if (browserType.Equals("chrome"))
             {
                 Driver = new ChromeDriver();
@@ -31,8 +34,8 @@ namespace CommonLibs.Implementation
         public void NavigateToFirstUrl(string url)
         {
             url = url.Trim();
-            Driver.Manage().PageLoad = TimeSpan.FromSeconds(pageLoadTime);
-            Driver.Manage().Timeouts(),ImplicitWait = TimeSpan.FromSeconds(elementDetectionTimeout);
+            Driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(pageLoadTime);
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(elementDetectionTimeout);
             Driver.Url = url;
         }
     }

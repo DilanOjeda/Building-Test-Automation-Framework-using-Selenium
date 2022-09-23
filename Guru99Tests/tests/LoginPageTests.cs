@@ -5,12 +5,6 @@ namespace Guru99Tests
 {
     public class LoginPageTests
     {
-        [SetUp]
-        public void SetUp()
-        {
-            
-        }
-
         [Test]
         public void Test1()
         {
