@@ -10,7 +10,7 @@ namespace Guru99Tests.tests
 {
     public class BaseTests
     {
-        CommonDriver CmnDriver;
+        public CommonDriver CmnDriver;
         public LoginPage loginPage;
         string url = "http://demo.guru99.com/v4";
 

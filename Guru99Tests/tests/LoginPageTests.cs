@@ -8,7 +8,12 @@ namespace Guru99Tests
         [Test]
         public void VerifyLoginTest()
         {
-            loginPage.LoginToApplication("mngr288890", "mngr288890");
+            string expectedTitle = "Guru99 Bank Home Page";
+            string actualTitle = CmnDriver.GetPageTitle();
+
+            loginPage.LoginToApplication("mngr442894", "ebYjYre");
+
+            Assert.AreEqual(expectedTitle, actualTitle);
         }
     }
 }
