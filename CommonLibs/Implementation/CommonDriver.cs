@@ -38,5 +38,21 @@ namespace CommonLibs.Implementation
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(elementDetectionTimeout);
             Driver.Url = url;
         }
+
+        public void CloseBrowser()
+        {
+            if (Driver != null)
+            {
+                Driver.Close();
+            }
+        }
+
+        public void CloseAllBrowsers()
+        {
+            if (Driver != null)
+            {
+                Driver.Quit();
+            }
+        }
     }
 }

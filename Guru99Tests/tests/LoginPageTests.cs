@@ -1,15 +1,14 @@
-using CommonLibs.Implementation;
+using Guru99Tests.tests;
 using NUnit.Framework;
 
 namespace Guru99Tests
 {
-    public class LoginPageTests
+    public class LoginPageTests : BaseTests
     {
         [Test]
-        public void Test1()
+        public void VerifyLoginTest()
         {
-            CommonDriver CmnDriver = new CommonDriver("chrome");
-            CmnDriver.NavigateToFirstUrl("http://demo.guru99.com/v4");
+            loginPage.LoginToApplication("mngr288890", "mngr288890");
         }
     }
 }
