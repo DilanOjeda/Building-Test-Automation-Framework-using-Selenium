@@ -25,5 +25,10 @@ namespace CommonLibs.Utils
         {
             _extentTest.Log(status, comment);
         }
+
+        public void flushReport()
+        {
+            _extentReports.Flush();
+        }
     }
 }
