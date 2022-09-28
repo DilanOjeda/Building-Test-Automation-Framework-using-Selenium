@@ -30,5 +30,10 @@ namespace CommonLibs.Utils
         {
             _extentReports.Flush();
         }
+
+        public void AddScreenshot(string screenshotFileName)
+        {
+            _extentTest.AddScreenCaptureFromPath(screenshotFileName);
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace Guru99Tests
         {
             extentReportsUtils.CreateATestCase("Verify Login Test");
             extentReportsUtils.AddTestLog(Status.Info, "Performing Login");
-            string expectedTitle = "Guru99 Bank Home Page";
+            string expectedTitle = "Guru99 Bank Home Page s";
             string actualTitle = CmnDriver.GetPageTitle();
 
             loginPage.LoginToApplication("mngr442894", "ebYjYre");
